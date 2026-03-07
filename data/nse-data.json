@@ -1,0 +1,19 @@
+{
+  "timestamp": "2025-03-07T10:00:00",
+  "index": {
+    "current": 2011.45,
+    "change": 150.45,
+    "percent_change": 8.07,
+    "volume": "846M",
+    "turnover": "29.4B"
+  },
+  "top_gainers": [
+    {"symbol": "SCOM", "name": "Safaricom", "price": 18.50, "change": 3.2},
+    {"symbol": "EQTY", "name": "Equity Group", "price": 52.00, "change": 2.8},
+    {"symbol": "KCB", "name": "KCB Group", "price": 38.25, "change": 2.1}
+  ],
+  "top_losers": [
+    {"symbol": "BAT", "name": "BAT Kenya", "price": 420.00, "change": -1.5},
+    {"symbol": "EABL", "name": "EABL", "price": 165.00, "change": -0.8}
+  ]
+}
