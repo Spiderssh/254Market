@@ -1,0 +1,39 @@
+name: Update NSE Market Data
+
+on:
+  schedule:
+    # Run every 30 minutes during market hours (9:00 AM - 3:00 PM EAT, Mon-Fri)
+    # EAT is UTC+3, so 9:00 EAT = 6:00 UTC, 15:00 EAT = 12:00 UTC
+    - cron: '*/30 6-12 * * 1-5'
+  workflow_dispatch:  # Allow manual trigger
+
+permissions:
+  contents: write
+
+jobs:
+  scrape-nse:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+        
+    - name: Install dependencies
+      run: |
+        pip install requests beautifulsoup4 pandas
+        
+    - name: Scrape NSE data
+      run: |
+        python scripts/scrape_nse.py
+        
+    - name: Commit and push if changes
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add data/
+        git diff --quiet && git diff --staged --quiet || (git commit -m "Update NSE data - $(date '+%Y-%m-%d %H:%M')" && git push)
