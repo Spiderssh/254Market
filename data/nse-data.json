@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-03-07T10:00:00",
+  "timestamp": "2026-03-09T07:07:25.671128",
   "index": {
     "current": 2011.45,
     "change": 150.45,
@@ -8,12 +8,37 @@
     "turnover": "29.4B"
   },
   "top_gainers": [
-    {"symbol": "SCOM", "name": "Safaricom", "price": 18.50, "change": 3.2},
-    {"symbol": "EQTY", "name": "Equity Group", "price": 52.00, "change": 2.8},
-    {"symbol": "KCB", "name": "KCB Group", "price": 38.25, "change": 2.1}
+    {
+      "symbol": "SCOM",
+      "name": "Safaricom",
+      "price": 18.5,
+      "change": 3.2
+    },
+    {
+      "symbol": "EQTY",
+      "name": "Equity Group",
+      "price": 52.0,
+      "change": 2.8
+    },
+    {
+      "symbol": "KCB",
+      "name": "KCB Group",
+      "price": 38.25,
+      "change": 2.1
+    }
   ],
   "top_losers": [
-    {"symbol": "BAT", "name": "BAT Kenya", "price": 420.00, "change": -1.5},
-    {"symbol": "EABL", "name": "EABL", "price": 165.00, "change": -0.8}
+    {
+      "symbol": "BAT",
+      "name": "BAT Kenya",
+      "price": 420.0,
+      "change": -1.5
+    },
+    {
+      "symbol": "EABL",
+      "name": "EABL",
+      "price": 165.0,
+      "change": -0.8
+    }
   ]
 }
